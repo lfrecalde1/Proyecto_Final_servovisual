@@ -1,0 +1,52 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/fer/catkin_ws/devel_isolated/towr_ros/include",
+                "/home/fer/catkin_ws/devel_isolated/xpp_msgs/include",
+                "/home/fer/catkin_ws/devel_isolated/ur_msgs/include",
+                "/home/fer/catkin_ws/devel_isolated/ur_driver/include",
+                "/home/fer/catkin_ws/devel_isolated/turtlebot3_example/include",
+                "/home/fer/catkin_ws/devel_isolated/turtlebot3_msgs/include",
+                "/home/fer/catkin_ws/devel_isolated/rosserial_msgs/include",
+                "/home/fer/catkin_ws/devel_isolated/rosserial_mbed/include",
+                "/home/fer/catkin_ws/devel_isolated/rosserial_arduino/include",
+                "/home/fer/catkin_ws/devel_isolated/mqtt_ros_bridge/include",
+                "/home/fer/catkin_ws/devel/include",
+                "/opt/ros/melodic/include",
+                "/home/fer/catkin_ws/src/beginner_tutorials/include",
+                "/home/fer/catkin_ws/src/cv_camera/include",
+                "/home/fer/catkin_ws/src/cv_basics/include",
+                "/home/fer/catkin_ws/src/iri_base_algorithm/include",
+                "/home/fer/catkin_ws/src/kuka_experimental/kuka_eki_hw_interface/include",
+                "/home/fer/catkin_ws/src/kuka_experimental/kuka_rsi_hw_interface/include",
+                "/home/fer/catkin_ws/src/rosserial/rosserial_server/include",
+                "/home/fer/catkin_ws/src/rosserial/rosserial_test/include",
+                "/home/fer/catkin_ws/src/simulacion_1/include",
+                "/home/fer/catkin_ws/src/simulacion_2/include",
+                "/home/fer/catkin_ws/src/towr/towr/include",
+                "/home/fer/catkin_ws/src/towr/towr_ros/include",
+                "/home/fer/catkin_ws/src/turtlebot3_simulations/turtlebot3_fake/include",
+                "/home/fer/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/include",
+                "/home/fer/catkin_ws/src/turtlebot3/turtlebot3_slam/include",
+                "/home/fer/catkin_ws/src/universal_robot/ur_kinematics/include",
+                "/home/fer/catkin_ws/src/vision_message/include",
+                "/home/fer/catkin_ws/src/xpp/robots/xpp_hyq/include",
+                "/home/fer/catkin_ws/src/xpp/xpp_msgs/include",
+                "/home/fer/catkin_ws/src/xpp/xpp_states/include",
+                "/home/fer/catkin_ws/src/xpp/xpp_vis/include",
+                "/usr/include"
+            ],
+            "name": "Linux",
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++14"
+        }
+    ],
+    "version": 4
+}

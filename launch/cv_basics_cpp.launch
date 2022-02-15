@@ -1,0 +1,8 @@
+<launch>
+  <node
+    pkg="cv_basics"
+    type="webcam_pub_node"
+    name="webcam_sub_nodo_1"
+    output="screen"
+  />
+</launch> 

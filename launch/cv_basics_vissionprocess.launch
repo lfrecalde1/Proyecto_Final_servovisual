@@ -1,0 +1,8 @@
+<launch>
+  <node
+    pkg="cv_basics"
+    type="vision_process_node"
+    name="vision_process_node"
+    output="screen"
+  />
+</launch> 
