@@ -1,0 +1,112 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  info [
+    "This demonstration shows a DJI Mavic 2 PRO flying over a rural area."
+    "After the drone has taken off, you can control it with the keyboard of your computer."
+  ]
+  title "DJI Mavic 2 PRO demo"
+  basicTimeStep 8
+  defaultDamping Damping {
+    linear 0.5
+    angular 0.5
+  }
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.7875695840119027 0.5223599308722677 0.32691627820963337 4.942574444817715
+  position -1.6727343258824128 2.6761827642563043 0.5965595246196107
+  near 0.2
+  follow "Mavic 2 PRO"
+  followType "None"
+  followSmoothness 0.2
+}
+TexturedBackground {
+  luminosity 3
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 12 12
+  floorAppearance Parquetry {
+  }
+  wallThickness 0.3
+  wallHeight 1.7
+}
+DEF mavic Mavic2Pro {
+  translation -0.004778011391669737 0.06570872787430464 -0.029999995521502364
+  rotation 0.9987852429771924 0.03484280373482699 -0.034842753032546095 -1.5720107048704246
+  controller "<extern>"
+  controllerArgs [
+    ""
+  ]
+  supervisor TRUE
+  bodySlot [
+    Camera {
+      translation 0.1 0.1 0
+      rotation -1.66574e-06 -7.19235e-09 1 -1.5708053071795867
+      name "camera_l"
+      fieldOfView 0.9
+      width 500
+      height 400
+    }
+    Camera {
+      translation 0.1 -0.1 0
+      rotation -1.66574e-06 -7.19235e-09 1 -1.5708053071795867
+      name "camera_r"
+      fieldOfView 0.9
+      width 500
+      height 400
+    }
+    Gyro {
+      rotation 1 0 0 0
+      name "gyro 1"
+    }
+    InertialUnit {
+      rotation 1 0 0 1.5708003061004252
+      name "inertial unit 1"
+    }
+  ]
+  cameraSlot []
+}
+Pioneer3dx {
+  translation -0.8760727100755552 0.09694367993687518 -4.3788862448286984e-09
+  rotation 0 1 0 -1.5708003061004252
+  controller ""
+  supervisor TRUE
+  extensionSlot [
+    Solid {
+      translation 0 0.15 0
+      children [
+        Shape {
+          geometry Box {
+            size 0.41 0.005 0.41
+          }
+        }
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0 0 0
+            }
+            texture ImageTexture {
+              url [
+                "/home/fer/Webots_proyectos/Mavic/Cheestboard/marker.jpg"
+              ]
+            }
+          }
+          geometry Box {
+            size 0.31 0.01 0.31
+          }
+        }
+      ]
+    }
+    Gyro {
+      rotation 0.577349935856137 -0.577349935856137 -0.5773509358560258 -2.094395307179586
+    }
+    InertialUnit {
+      rotation 0 1 0 1.5707996938995747
+    }
+    GPS {
+      rotation 0 1 0 1.5708003061004252
+    }
+  ]
+}

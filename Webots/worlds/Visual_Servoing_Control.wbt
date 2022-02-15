@@ -1,0 +1,127 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  info [
+    "This demonstration shows a DJI Mavic 2 PRO flying over a rural area."
+    "After the drone has taken off, you can control it with the keyboard of your computer."
+  ]
+  title "DJI Mavic 2 PRO demo"
+  basicTimeStep 8
+  defaultDamping Damping {
+    linear 0.5
+    angular 0.5
+  }
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.7073225274011165 0.6512903468126358 0.27480124886829277 5.210247407107481
+  position -1.5632709237710802 3.8549102517853155 2.141691590214524
+  near 0.2
+  followType "None"
+  followSmoothness 0.2
+}
+TexturedBackground {
+  luminosity 3
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 12 12
+  floorAppearance Parquetry {
+  }
+  wallThickness 0.3
+  wallHeight 1.7
+}
+Solid {
+  translation 0.782784 0.316695 -0.458406
+  rotation 0.7745972141192264 -0.44721312362157567 0.44721312362157567 1.82348
+  children [
+    Solid {
+      rotation 0 1 0 0.261795
+      children [
+        Shape {
+          appearance Appearance {
+            texture ImageTexture {
+              url [
+                "/home/fer/Webots_proyectos/Mavic/Cheestboard/marker.jpg"
+              ]
+            }
+          }
+          geometry Box {
+            size 0.31 0.01 0.31
+          }
+        }
+      ]
+      name "solid2"
+    }
+  ]
+  name "solid2"
+}
+Pioneer3dx {
+  hidden position_0_0 0.008573957010221943
+  hidden position_0_1 -5.574426943120632e-07
+  hidden position_0_2 9.375479651552385e-07
+  hidden translation_1 0 -0.0011939 0.191844
+  hidden rotation_1 0 1 0 0.008573957010217428
+  hidden position_1_0 0.037212243842006616
+  hidden translation_2 0 -0.0521014 0.012843
+  hidden rotation_2 1 0 0 0.03721224384200615
+  hidden translation_4 -0.165 -0.0001156 0
+  hidden rotation_4 1 0 0 5.575503985246947e-07
+  hidden translation_9 0.165032 -0.0001156 0
+  hidden rotation_9 -1 0 0 9.377081824870359e-07
+  translation 0.00032671013337395166 0.09694367959942497 0.0016694719884897957
+  rotation -0.02813134476980552 0.9994728886503504 -0.01620408264501176 -1.0456251097121148
+  controller "<extern>"
+  supervisor TRUE
+  extensionSlot [
+    Camera {
+      translation 0.1 0.2 -0.2
+      rotation 1 0 0 0
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.333333 0.341176 0.32549
+            }
+          }
+          geometry Box {
+            size 0.05 0.05 0.01
+          }
+        }
+      ]
+      name "camera_r"
+      fieldOfView 0.9
+      width 500
+      height 400
+    }
+    Camera {
+      translation -0.1 0.2 -0.2
+      rotation 1 0 0 0
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.333333 0.341176 0.32549
+            }
+          }
+          geometry Box {
+            size 0.05 0.05 0.01
+          }
+        }
+      ]
+      name "camera_l"
+      fieldOfView 0.9
+      width 500
+      height 400
+    }
+    Gyro {
+      rotation 0.577349935856137 -0.577349935856137 -0.5773509358560258 -2.094395307179586
+    }
+    InertialUnit {
+      rotation 0 1 0 1.5707996938995747
+    }
+    GPS {
+      rotation 0 1 0 1.5708003061004252
+    }
+  ]
+}

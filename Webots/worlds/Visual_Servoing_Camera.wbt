@@ -1,0 +1,133 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  info [
+    "This demonstration shows a DJI Mavic 2 PRO flying over a rural area."
+    "After the drone has taken off, you can control it with the keyboard of your computer."
+  ]
+  title "DJI Mavic 2 PRO demo"
+  basicTimeStep 8
+  defaultDamping Damping {
+    linear 0.5
+    angular 0.5
+  }
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.307949844595596 0.9078629135314729 0.28452033925133313 4.697541293943267
+  position -3.6680001361259564 3.0106788232474235 0.7792130298748476
+  near 0.2
+  followType "None"
+  followSmoothness 0.2
+}
+TexturedBackground {
+  luminosity 3
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 12 12
+  floorAppearance Parquetry {
+  }
+  wallThickness 0.3
+  wallHeight 1.7
+}
+Pioneer3dx {
+  hidden position_0_0 -7.464962718150441e-12
+  hidden position_0_1 -4.693623107149349e-13
+  hidden position_0_2 4.655242946408839e-13
+  hidden position_1_0 2.2194946696698864e-07
+  hidden rotation_2 1 0 0 2.210199382035633e-07
+  translation -0.004107613274931955 0.09694367993687522 -0.0030002823006934987
+  rotation -0.01625712545359064 0.9997364669021424 -0.016208103467332785 -1.568023194067912
+  controller "<extern>"
+  supervisor TRUE
+  extensionSlot [
+    Camera {
+      translation 0.1 0.2 -0.2
+      rotation 1 0 0 0
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.333333 0.341176 0.32549
+            }
+          }
+          geometry Box {
+            size 0.05 0.05 0.01
+          }
+        }
+      ]
+      name "camera_r"
+      fieldOfView 0.9
+      width 500
+      height 400
+    }
+    Camera {
+      translation -0.1 0.2 -0.2
+      rotation 1 0 0 0
+      children [
+        Solid {
+          translation 0.1 0.026702 -0.58277
+          rotation 1 1.1745e-08 -6.78101e-09 -1.5707953071795862
+          children [
+            Shape {
+              appearance Appearance {
+                texture ImageTexture {
+                  url [
+                    "/home/fer/Webots_proyectos/Mavic/Cheestboard/marker.jpg"
+                  ]
+                }
+              }
+              geometry Box {
+                size 0.31 0.01 0.31
+              }
+            }
+          ]
+          name "solid2"
+        }
+        Solid {
+          translation -0.68 -0.0513329 -0.85584
+          rotation 0.577349935856137 0.5773509358560258 -0.577349935856137 -2.094395307179586
+          children [
+            Shape {
+              appearance Appearance {
+                texture ImageTexture {
+                  url [
+                    "/home/fer/Webots_proyectos/Mavic/Cheestboard/chest.jpg"
+                  ]
+                }
+              }
+              geometry Box {
+                size 0.25 0.01 0.3
+              }
+            }
+          ]
+          name "solid2"
+        }
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.333333 0.341176 0.32549
+            }
+          }
+          geometry Box {
+            size 0.05 0.05 0.01
+          }
+        }
+      ]
+      name "camera_l"
+      fieldOfView 0.9
+      width 500
+      height 400
+    }
+    Gyro {
+      rotation 0.577349935856137 -0.577349935856137 -0.5773509358560258 -2.094395307179586
+    }
+    InertialUnit {
+      rotation 0 1 0 1.5707996938995747
+    }
+    GPS {
+      rotation 0 1 0 1.5708003061004252
+    }
+  ]
+}
