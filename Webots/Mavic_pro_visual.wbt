@@ -1,0 +1,108 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  info [
+    "This demonstration shows a DJI Mavic 2 PRO flying over a rural area."
+    "After the drone has taken off, you can control it with the keyboard of your computer."
+  ]
+  title "DJI Mavic 2 PRO demo"
+  basicTimeStep 8
+  defaultDamping Damping {
+    linear 0.5
+    angular 0.5
+  }
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.9471945506039681 0.295919846925254 0.12350679131886248 0.8362008263583445
+  position 0.1875779972547796 1.176326957171295 1.1208768746600042
+  near 0.2
+  follow "Mavic 2 PRO"
+  followType "None"
+  followSmoothness 0.2
+}
+TexturedBackground {
+  luminosity 3
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 400 400
+  tileSize 6 6
+  appearance SandyGround {
+  }
+}
+Solid {
+  rotation 0 1 0 -1.5707953071795862
+  children [
+    Shape {
+      geometry Box {
+        size 0.41 0.005 0.41
+      }
+    }
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.180392 0.203922 0.211765
+        }
+        texture ImageTexture {
+          url [
+            "/home/fer/Webots_proyectos/Mavic/Cheestboard/marker.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.31 0.01 0.31
+      }
+    }
+  ]
+}
+Road {
+  translation -43.8 0.01 -9.2
+  rotation 0 1 0 1.1781
+  width 3
+  numberOfLanes 1
+  rightBorder FALSE
+  leftBorder FALSE
+  wayPoints [
+    0 0 0
+    0 0 100
+    200 0 200
+  ]
+  splineSubdivision 8
+  appearance Pavement {
+    type "black stone"
+  }
+}
+DEF mavic Mavic2Pro {
+  translation -0.001024111890472787 0.06100008025524278 -0.029999953031171516
+  rotation 0.9999470859786117 0.007277070625705539 -0.007271140625195658 -1.570845307179586
+  controller "<extern>"
+  supervisor TRUE
+  bodySlot [
+    Camera {
+      translation 0.1 0.1 0
+      rotation 8.89126e-07 -1.36929e-06 1 -1.5707953071795862
+      name "camera_l"
+      fieldOfView 0.9
+      width 500
+      height 400
+    }
+    Camera {
+      translation 0.1 -0.1 0
+      rotation 5.149489999931373e-06 -3.6943099999507664e-07 0.9999999999866731 -1.5707853071795865
+      name "camera_r"
+      fieldOfView 0.9
+      width 500
+      height 400
+    }
+    Gyro {
+      rotation 1 0 0 0
+      name "gyro 1"
+    }
+    InertialUnit {
+      rotation 1 0 0 1.5708003061004252
+      name "inertial unit 1"
+    }
+  ]
+  cameraSlot []
+}
